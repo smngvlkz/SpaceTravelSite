@@ -597,6 +597,7 @@ body {
     }
 
     .grid-container--crew {
+        padding-bottom: 0;
         grid-template-areas: 
             'title'
             'content'
@@ -638,7 +639,7 @@ body {
 
     .grid-container--destination > img,
     .grid-container--crew > img {
-        max-width: 100%;
+        max-width: 90%;
     }
     
     .destination-meta {
@@ -652,5 +653,13 @@ body {
             '. content image'
             '. tabs image';
     }
-    
+
+    .grid-container--crew > .dot-indicators {
+        justify-self: start;
+    }
+
+    .grid-container--crew > img {
+        --align-self: end;
+    }
+
 }
