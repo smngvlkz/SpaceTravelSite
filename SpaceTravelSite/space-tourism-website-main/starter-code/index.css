@@ -455,19 +455,19 @@ body {
 } 
 
 /* destionation */
-.destionation {
+.destination {
     background-image: url(./assets/destination/background-destination-mobile.jpg);
 }
 
 @media (min-width: 35rem) {
-    .destionation {
+    .destination {
         background-position: center center;
         background-image: url(./assets/destination/background-destination-tablet.jpg);
     }
 }
 
 @media (min-width: 45rem) {
-    .destionation {
+    .destination {
         background-image: url(./assets/destination/background-destination-desktop.jpg);
     }
 } 
