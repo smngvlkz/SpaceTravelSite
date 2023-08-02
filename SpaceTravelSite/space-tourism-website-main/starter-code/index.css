@@ -465,7 +465,7 @@ body {
     padding-bottom: 4rem;
 }
 
-.grid-container * {
+.grid-container p:not([class]) {
     max-width: 50ch;
 }
 
@@ -504,6 +504,10 @@ body {
     margin-top: 2.5rem;
 }
 
+.destination-meta p {
+    font-size: 1.5rem;
+}
+
 @media (min-width: 35rem) {
     .numbered-title {
         justify-self: start;
@@ -539,6 +543,7 @@ body {
 
     .grid-container--destination {
         justify-items: center;
+        align-content: start;
         grid-template-areas: 
         '. title title'
         '. image tabs'
@@ -550,7 +555,102 @@ body {
     }
     
     .destination-meta {
-        --gap: 6rem;
+        --gap: min(6vw, 6rem);
         justify-content: start;
     }
+}
+
+/* crew layout */
+
+.grid-container--crew {
+    --flow-space: 2rem;
+    grid-template-areas: 
+        'title'
+        'image'
+        'tabs'
+        'content';
+}
+
+.grid-container--destination > img {
+    grid-area: image;
+    max-width: 60%;
+    border-bottom: 1px solid hsl( var(--clr-white) / .1);
+}
+
+.grid-container--crew > .dot-indicators {
+    grid-area: tabs;
+}
+
+.grid-container--crew > .crew-details {
+    grid-area: content;
+}
+
+@media (min-width: 35rem) {
+    .numbered-title {
+        justify-self: start;
+        margin-top: 2rem;
+    }
+
+    .destination-meta {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .grid-container--crew {
+        grid-template-areas: 
+            'title'
+            'content'
+            'tabs'
+            'image';
+    }
+
+}
+
+
+@media (min-width: 45em) {
+    .grid-container {
+        text-align: left;
+        column-gap: var(--container-gap, 2rem);
+        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+    }
+    
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+    }
+
+    .grid-container--home > *:first-child {
+        grid-column: 2;
+    }
+
+    .grid-container--home > *:last-child {
+        grid-column: 3;
+    }
+
+    .grid-container--destination {
+        justify-items: center;
+        align-content: start;
+        grid-template-areas: 
+        '. title title'
+        '. image tabs'
+        '. image content';
+    }
+
+    .grid-container--destination > img,
+    .grid-container--crew > img {
+        max-width: 100%;
+    }
+    
+    .destination-meta {
+        --gap: min(6vw, 6rem);
+        justify-content: start;
+    }
+    
+    .grid-container--crew {
+        grid-template-areas: 
+            '. titlt title'
+            '. content image'
+            '. tabs image';
+    }
+    
 }
