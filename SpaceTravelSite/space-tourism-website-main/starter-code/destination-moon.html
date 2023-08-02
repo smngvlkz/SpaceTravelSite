@@ -23,7 +23,7 @@
     <div>
       <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
     </div>
-    <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
     <nav>
         <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
             <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
@@ -40,12 +40,11 @@
     <img src="assets/destination/image-moon.png" alt="the moon">
 
     <div class="tab-list underline-indicators flex">
-      <button class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Moon</button>
-      <button class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Mars</button>
-      <button class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Europa</button>
-      <button class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Titan</button>
+        <button aria-selected="true" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Moon</button>
+        <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Mars</button>
+        <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Europa</button>
+        <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Titan</button>
     </div>
-    
 
     <article class="destination-info">
       <h2 class="fs-800 uppercase ff-serif">Moon</h2>
