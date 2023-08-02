@@ -16,6 +16,8 @@
       {
         "aria-allowed-attr": "off"
       }
-    ]
+    ],
+    "no-inline-styles": "off",
+    "button-type": "off"
   }
 }
