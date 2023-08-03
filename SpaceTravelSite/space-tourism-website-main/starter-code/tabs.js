@@ -40,5 +40,15 @@ function changeTabFPanel(e) {
     const targetTab = e.target;
     const targetPanel = targetTab.getAttribute("aria-controls");
 
+    const tabContainer = targetTab.parentNode;
+    const mainContainer = tabContainer.parentNode;
+
+    mainContainer
+        .querySelectorAll('article')
+        .forEach((article) => article.setAttribute("hidden", true));
+
+
+    mainContainer.querySelector([`#${targetPanel}`]).removeAttruibute('hidden');
+
     console.log(targetPanel);
 }
