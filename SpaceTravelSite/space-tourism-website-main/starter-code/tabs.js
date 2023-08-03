@@ -43,26 +43,26 @@ function changeTabPanel(e) {
     
     const tabContainer = targetTab.parentNode;
     const mainContainer = tabContainer.parentNode;
-
+    
     tabContainer
         .querySelector('[aria-selected="true"]')
         .setAttribute("aria-selected", false);
-
-        targetTab.setAttribute("aria-selected", true);
+        
+    targetTab.setAttribute("aria-selected", true);
     
     hideContent(mainContainer, '[role="tabpanel"]');
     showContent(mainContainer, [`#${targetPanel}`]);
-
-    hideContent(mainContainer, 'picture');
-    showContent(mainContainer, [`#${targetImage}`]);
+    
+    hideContent(mainContainer, 'picture')
+    showContent(mainContainer, [`#${targetImage}`])
 }
 
 function hideContent(parent, content) {
-    mainContainer
-    .querySelectorAll(content)
-    .forEach((panel) => panel.setAttribute("hidden", true));
+    parent
+        .querySelectorAll(content)
+        .forEach((item) => item.setAttribute("hidden", true));
 }
 
-function showContent(parent , content) {
-    mainContainer.querySelector(content).removeAttribute('hidden');
+function showContent(parent, content) {
+     parent.querySelector(content).removeAttribute('hidden');
 }
