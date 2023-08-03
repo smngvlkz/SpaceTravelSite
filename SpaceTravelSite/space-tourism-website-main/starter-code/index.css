@@ -697,8 +697,8 @@ body {
     }
 
      .grid-container--crew > picture { 
+            grid-column: span 2;
             --align-self: end;
-            max-width: 100%;
+            max-width: 80%;
     } 
-
 }
