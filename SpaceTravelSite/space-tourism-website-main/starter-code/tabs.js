@@ -44,8 +44,8 @@ function changeTabFPanel(e) {
     const mainContainer = tabContainer.parentNode;
 
     mainContainer
-        .querySelectorAll('article')
-        .forEach((article) => article.setAttribute("hidden", true));
+        .querySelectorAll('[role="tabpanel"]')
+        .forEach((panel) => panel.setAttribute("hidden", true));
 
 
     mainContainer.querySelector([`#${targetPanel}`]).removeAttruibute('hidden');
