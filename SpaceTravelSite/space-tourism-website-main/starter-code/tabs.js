@@ -20,4 +20,7 @@ tabList.addEventListener('keydown', (e) => {
         tabFocus = tabFocus--;
         console.log(tabFocus)
     }
+
+    tabs[tabFocus].setAttribute("tabindex", 0);
+    tabs[tabFocus].focus();   
 })

@@ -704,3 +704,7 @@ body {
     } */
 
 }
+
+[role="tab"]:focus {
+    color: green;
+}
