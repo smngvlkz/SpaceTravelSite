@@ -279,6 +279,7 @@ select {
 .primary-header {
     justify-content: space-between;
     align-items: center;
+    background-color: transparent;
 }
 
 .primary-navigation {
@@ -774,10 +775,6 @@ body {
         flex-direction: column; 
      }
 
-     .flexible {
-        display: flex;
-        flex-wrap: wrap;
-      }
 }
 
 
