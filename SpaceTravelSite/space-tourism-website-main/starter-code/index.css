@@ -691,6 +691,7 @@ body {
 
 .grid-container--technology > .technology-info {
     grid-area: content;
+    flex-direction: column;
 }
 
 .technology-meta {
@@ -760,7 +761,7 @@ body {
     max-width: 800px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items:center
 }
     
 @media (min-width: 45em) {
@@ -770,7 +771,6 @@ body {
     }
 }
 
-/* Add the provided CSS code */
-.hidden-content *:not(button) {
-  display:none
+.dot-indicators {
+   flex-direction: column; 
 }
