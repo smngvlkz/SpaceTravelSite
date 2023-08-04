@@ -64,3 +64,30 @@ function hideContent(parent, content) {
 function showContent(parent, content) {
      parent.querySelector(content).removeAttribute('hidden');
 }
+
+// get all the dot indicators
+const dotIndicators = document.querySelectorAll('.dot-indicators button');
+
+// get all the content sections
+const contentSections = document.querySelectorAll('.technology article');
+
+// add click event listener to each dot indicator
+dotIndicators.forEach((dotIndicator, index) => {
+  dotIndicator.addEventListener('click', () => {
+    // remove active class from all dot indicators
+    dotIndicators.forEach(dotIndicator => {
+      dotIndicator.classList.remove('active');
+    });
+    
+    // add active class to clicked dot indicator
+    dotIndicator.classList.add('active');
+    
+    // hide all content sections
+    contentSections.forEach(contentSection => {
+      contentSection.hidden = true;
+    });
+    
+    // show corresponding content section
+    contentSections[index].hidden = false;
+  });
+});
