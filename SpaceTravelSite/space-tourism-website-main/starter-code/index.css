@@ -528,19 +528,6 @@ body {
     grid-area: title;
 }
 
-.grid-container--technology {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media (min-width: 45em) {
-    .grid-container--technology {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-}
-
 
 /* destination layout */
 
@@ -769,4 +756,19 @@ body {
         --gap: min(6vw, 6rem);
         justify-content: start;
     }
+    .grid-container--technology {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    @media (min-width: 45em) {
+        .grid-container--technology {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    }
+
 }
+
+
