@@ -684,6 +684,7 @@ body {
 .grid-container--technology > picture {
     grid-area: image;
     max-width: 60%;
+    border-bottom: 1px solid hsl( var(--clr-white) / .1);
 }
 
 .grid-container--technology > .tab-list {
@@ -695,12 +696,6 @@ body {
     flex-direction: column;
 }
 
-.technology-meta {
-    flex-direction: column;
-    border-top: 1px solid hsl( var(--clr-white) / .1);
-    padding-top: 2.5rem;
-    margin-top: 2.5rem;
-}
 
 .technology-meta p {
     font-size: 1.5rem;
@@ -712,7 +707,7 @@ body {
         margin-top: 2rem;
     }
 
-    .technology-meta {
+    .destination-meta {
         flex-direction: row;
         justify-content: space-evenly;
     }
@@ -771,7 +766,7 @@ body {
         }
     }
 
-    .dot-indicators {
+    .grid-container--technology .dot-indicators {
         flex-direction: column; 
      }
 
