@@ -694,7 +694,7 @@ body {
 }
 
 .technology-meta {
-    flex-direction: column;
+    flex-grow: 1;
     border-top: 1px solid hsl( var(--clr-white) / .1);
     padding-top: 2.5rem;
     margin-top: 2.5rem;
@@ -758,7 +758,7 @@ body {
 
 .grid-container--technology {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
 }
     
