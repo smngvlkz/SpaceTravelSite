@@ -771,3 +771,7 @@ body {
     }
 }
 
+/* Add the provided CSS code */
+.hidden-content *:not(button) {
+  display:none
+}

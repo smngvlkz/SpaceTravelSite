@@ -7,7 +7,6 @@ tabs.forEach((tab) => {
     tab.addEventListener('click', changeTabPanel);
 });
 
-
 let tabFocus = 0;
 function changeTabFocus(e) {
     const keydownLeft = 37;
@@ -32,7 +31,6 @@ function changeTabFocus(e) {
         tabs[tabFocus].focus();
     }
 }
-
 
 function changeTabPanel(e) {
     const targetTab = e.target;
@@ -65,29 +63,40 @@ function showContent(parent, content) {
      parent.querySelector(content).removeAttribute('hidden');
 }
 
-// get all the dot indicators
 const dotIndicators = document.querySelectorAll('.dot-indicators button');
 
-// get all the content sections
 const contentSections = document.querySelectorAll('.technology article');
 
-// add click event listener to each dot indicator
 dotIndicators.forEach((dotIndicator, index) => {
   dotIndicator.addEventListener('click', () => {
-    // remove active class from all dot indicators
+ 
     dotIndicators.forEach(dotIndicator => {
       dotIndicator.classList.remove('active');
     });
     
-    // add active class to clicked dot indicator
+
     dotIndicator.classList.add('active');
     
-    // hide all content sections
     contentSections.forEach(contentSection => {
       contentSection.hidden = true;
     });
     
-    // show corresponding content section
     contentSections[index].hidden = false;
+  });
+});
+
+
+const buttons = document.querySelectorAll('.tab-list button');
+
+const pictures = document.querySelectorAll('picture');
+
+buttons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+
+    pictures.forEach(picture => {
+      picture.hidden = true;
+    });
+    
+    pictures[index].hidden = false;
   });
 });
