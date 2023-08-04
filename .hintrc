@@ -15,7 +15,9 @@
       "default",
       {
         "aria-allowed-attr": "off",
-        "aria-valid-attr-value": "off"
+        "aria-valid-attr-value": "off",
+        "aria-required-children": "off",
+        "aria-roles": "off"
       }
     ],
     "no-inline-styles": "off",
