@@ -781,7 +781,6 @@ body {
             order: -3;
          }
          
-         .grid-container--technology > h1,
          .grid-container--technology > .indicators{
              order: -2;
          }
