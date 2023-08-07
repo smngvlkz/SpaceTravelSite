@@ -645,7 +645,7 @@ body {
         '. image content';
     }
 
-    .grid-container--destination > picture, {
+    .grid-container--destination > picture {
         max-width: 90%;
     }
     
@@ -674,17 +674,19 @@ body {
 
 .grid-container--technology {
     --flow-space: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-template-areas:
+        'title'
+        'tabs'
+        'content'
+        'image';
 }
 
 .grid-container--technology > h1 {
     grid-area: title;
 }
 
-.grid-container--technology > .indicators {
-    grid-area: indicators;
+.grid-container--technology > .dot-indicators {
+    grid-area: tabs;
 }
 
 .grid-container--technology > picture {
@@ -701,9 +703,10 @@ body {
     grid-area: content;
 }
 
-.technology-meta p {
-    font-size: 1.5rem;
+.technology-info h2 {
+    color: hsl( var(--clr-white) / .5);
 }
+
 
 @media (min-width: 35rem) {
     .numbered-title {
@@ -715,6 +718,16 @@ body {
         flex-direction: row;
         justify-content: space-evenly;
     }
+
+    .grid-container--technology {
+        padding-bottom: 0%;
+        grid-template-areas:
+            'title'
+            'tabs'
+            'content'
+            'image';
+    }
+
 }
 
 @media (min-width: 45em) {
@@ -737,82 +750,19 @@ body {
         grid-column: 3;
     }
 
-    .grid-container--technology {
-        max-width: 800px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    .grid-container--technology > picture {
-        max-width: 100%;
-    }
-    
-    .technology-meta {
-        flex-grow: 0 1 auto;
-        border-top: 1px solid hsl( var(--clr-white) / .1);
-        padding-top: 2.5rem;
-        margin-top: 2.5rem;
+    .grid-container--destination {
+        justify-items: center;
+        align-content: start;
+        grid-template-areas:
+            '.title title'
+            '.image tabs'
+            '.image content';
     }
 
     .grid-container--technology {
         max-width: 800px;
         display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-        
-    @media (min-width: 45em) {
-        .grid-container--technology {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-        }
-        
-        .grid-container--technology > picture,
-        .grid-container--technology > .tab-list,
-        .grid-container--technology > .technology-info{
-            order: -4;
-        }
-        
-         .grid-container--technology > picture{
-            order: -3;
-         }
-         
-         .grid-container--technology > .indicators{
-             order: -2;
-         }
-         
-         .grid-container--technology > h1{
-             order: -1;
-         }
-         
-         .grid-container--technology{
-             flex-direction: column-reverse;
-         }
-         
-         .grid-container--technology > picture,
-         .grid-container--technology > h1,
-         .grid-container--technology >.indicators,
-         .grid-container--technology >.tab-list,
-         .grid-container--technology>.technology-info{
-             align-self: center;
-         }
-         
-         .grid-container--technology>.tab-list,
-         .grid-container--technology>.indicators{
-             margin-top: var(--flow-space);
-         }
-         
-         
-
-     }
-
-     .grid-container--technology{
-          display: flex;
-          flex-direction: column-reverse;
+        flex-direction: column-reverse;
      }
 
      .grid-container--technology>.tab-list,
@@ -827,27 +777,5 @@ body {
      .grid-container--technology>.content{
           align-self: center;
      }
-
+    
 }
-
-.grid-container--technology{
-      display: flex;
-      flex-direction: column-reverse;
-}
-
-.grid-container--technology>.tab-list,
-.grid-container--technology>.indicators{
-      margin-top: var(--flow-space);
-}
-
-.grid-container--technology>.tab-list,
-.grid-container--technology>.indicators,
-.grid-container--technology>.h1,
-.grid-container--technology>picture,
-.grid-container--technology>.content{
-      align-self: center;
-}
-
-
-
-
