@@ -774,20 +774,20 @@ body {
         .grid-container--technology > picture,
         .grid-container--technology > .tab-list,
         .grid-container--technology > .technology-info{
-            order: -1;
+            order: -4;
         }
         
          .grid-container--technology > picture{
-            order: -2;
+            order: -3;
          }
          
          .grid-container--technology > h1,
          .grid-container--technology > .indicators{
-             order: -3;
+             order: -2;
          }
          
          .grid-container--technology > h1{
-             order: -4;
+             order: -1;
          }
          
          .grid-container--technology{
